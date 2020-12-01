@@ -29,5 +29,16 @@ date || credit || debit || balance
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+User Stories
 
+As a user,
+so that I can keep my money safe,
+I want to be able to deposit money into my bank account.
 
+As a user,
+so that I can access my money,
+I want to be able to withdraw money.
+
+As a user,
+so that I can view my account history,
+I want to be able to view transactions with corresponding dates and my account balance.
