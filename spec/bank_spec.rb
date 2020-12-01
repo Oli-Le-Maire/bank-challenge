@@ -9,6 +9,10 @@ describe Bank do
     expect(subject.deposited(100)).to eq (100)
   end
 
-
+  it 'adds deposited money to the users bank balance' do
+    subject.deposited(500)
+    subject.add_deposit_to_balance
+    expect(subject.balance).to eq (500)
+  end
 
 end
