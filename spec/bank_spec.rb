@@ -15,4 +15,14 @@ describe Bank do
     expect(subject.balance).to eq -500
   end
 
+  it 'allows a user to see his/her bank balance after depositing money' do
+    subject.amount_deposited(35)
+    expect(subject.balance).to eq 35
+  end
+
+  it 'allows a user to see his/her bank balance after withdrawing money' do
+    subject.amount_to_withdraw(65)
+    expect(subject.balance).to eq -65
+  end
+
 end
