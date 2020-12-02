@@ -25,4 +25,6 @@ describe Bank do
     expect(subject.balance).to eq -65
   end
 
+  
+
 end
