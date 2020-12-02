@@ -17,4 +17,8 @@ describe Bank do
     expect(subject.balance).to eq -500
   end
 
+  it 'shows a string with 4 elements to it separated by ||s' do
+    expect(subject.bank_statement).to eq '0 || 0 || 0 || 0'
+  end
+
 end

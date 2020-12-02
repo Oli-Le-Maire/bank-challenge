@@ -6,6 +6,7 @@ class Bank
     @balance = 0
     @deposited = 0
     @withdrawn = 0
+    @bank_statement = '0 || 0 || 0 || 0'
   end
 
   def amount_deposited(deposited)
@@ -22,6 +23,10 @@ class Bank
 
   def subtract_withdrawn_money_from_balance
     @balance -= @withdrawn
+  end
+
+  def bank_statement
+    @bank_statement
   end
 
 end
