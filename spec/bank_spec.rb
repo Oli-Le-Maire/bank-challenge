@@ -25,6 +25,10 @@ describe Bank do
     expect(subject.balance).to eq -65
   end
 
-  
+  it 'formats the transaction_array' do
+    subject.stub(:date_formatter) {'02/12/2020'}
+    subject.amount_deposited(900)
+    expect(subject.transaction_array).to eq ["02/12/2020", 900, 0, 900]
+  end
 
 end
