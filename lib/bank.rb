@@ -4,7 +4,6 @@ class Bank
 
   def initialize
     @balance = 0
-    @bank_statement = [['Date || Credit || Debit || Balance']]
     @deposited_array = []
   end
 
