@@ -15,8 +15,4 @@ describe Bank do
     expect(subject.balance).to eq -500
   end
 
-  it 'lets a user see an empty bank statement' do
-    expect(subject.balance).to eq 0
-  end
-
 end
