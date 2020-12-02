@@ -3,10 +3,11 @@ class Bank
   attr_reader :balance
 
   def initialize
-    @balance = 0
+    @balance = 500
     @deposited = 0
     @withdrawn = 0
-    @bank_statement = '0 || 0 || 0 || 0'
+    @bank_statement = [['Date || Credit || Debit || Balance']]
+    @single_deposited_amount = []
   end
 
   def amount_deposited(deposited)
@@ -28,5 +29,12 @@ class Bank
   def bank_statement
     @bank_statement
   end
+
+  # def add_transaction_details_to_empty_array
+  #   @single_deposited_amount << @deposited
+  # end
+
+
+
 
 end
