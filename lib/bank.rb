@@ -4,17 +4,17 @@ class Bank
 
   def initialize
     @balance = 0
-    @deposited_array = []
+    @transaction_array = []
   end
 
   def amount_deposited(deposited)
     @balance += deposited
-    @deposited_array << deposited
+    @transaction_array << deposited
   end
 
   def amount_to_withdraw(withdrawn)
     @balance -= withdrawn
-    @deposited_array << withdrawn
+    @transaction_array << withdrawn
   end
 
 
