@@ -25,10 +25,16 @@ describe Bank do
     expect(subject.balance).to eq -65
   end
 
+  #this test's stub is not working as it should at present and will only work if the current date is updated each day
   it 'formats the transaction_array' do
     subject.stub(:date_formatter) {'02/12/2020'}
     subject.amount_deposited(900)
-    expect(subject.transaction_array).to eq ["02/12/2020", 900, 0, 900]
+    expect(subject.transaction_array).to eq ['02/12/2020', 900, 0, 900]
+  end
+
+  it 'adds a transaction_array to the bank_statement' do
+    subject.amount_deposited(750)
+    expect(subject.view_bank_statement).to eq [['Date || Credit || Debit || Balance'], ['02/12/2020', 750, 0, 750]]
   end
 
 end

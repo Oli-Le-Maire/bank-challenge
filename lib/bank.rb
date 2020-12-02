@@ -10,15 +10,16 @@ class Bank
     @transaction_array = []
     @deposited = 0
     @withdrawn = 0
+    @bank_statement = [['Date || Credit || Debit || Balance']]
   end
 
-  def amount_deposited(deposited = 0, withdrawn = 0)
+  def amount_deposited(deposited = 0)
     @deposited = deposited
     @balance += @deposited
     format_transaction_array
   end
 
-  def amount_to_withdraw(withdrawn = 0, deposited = 0)
+  def amount_to_withdraw(withdrawn = 0)
     @withdrawn = withdrawn
     @balance -= @withdrawn
     format_transaction_array
@@ -29,7 +30,16 @@ class Bank
     @transaction_array << @deposited
     @transaction_array << @withdrawn
     @transaction_array << @balance
-    @transaction_array
+    add_transaction_array_to_bank_statement
+  end
+
+  def add_transaction_array_to_bank_statement
+    @bank_statement << @transaction_array
+    view_bank_statement
+  end
+
+  def view_bank_statement
+    @bank_statement
   end
 
 end
