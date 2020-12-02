@@ -35,6 +35,7 @@ class Bank
 
   def add_transaction_array_to_bank_statement
     @bank_statement << @transaction_array
+    @transaction_array = []
     view_bank_statement
   end
 
