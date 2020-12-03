@@ -28,7 +28,7 @@ class Bank
   end
 
   def change_0s_to_empty_strings
-    if @withdrawn == 0
+    if @withdrawn.zero?
       @withdrawn = ""
     else
       @deposited = ""

@@ -40,7 +40,7 @@ Instructions:
   1) go into IRB from the project root file
   2) require the file by typing into the command line, require './lib/bank.rb'
   3) instantiate a new object of bank by typing in bank = Bank.new
-  4) enter the amount of money you wish to deposit (for example, 750) by typing in bank.amount_deposited(750)
+  4) enter the amount of money you wish to deposit (for example, 750) by typing in bank.amount_deposited(750). Note that the amount entered has to be an integer.
 
 Story 2.
 As a user,
@@ -51,7 +51,7 @@ Instructions:
   1) go into IRB from the project root file
   2) require the file by typing into the command line, require './lib/bank.rb'
   3) instantiate a new object of bank by typing in bank = Bank.new
-  4) enter the amount of money you wish to withdraw (for example, 1000) by typing in bank.amount_to_withdraw(1000)
+  4) enter the amount of money you wish to withdraw (for example, 1000) by typing in bank.amount_to_withdraw(1000). Note that the amount entered has to be an integer.
 
 Story 3.
 As a user,
@@ -92,9 +92,16 @@ Tasks not completed
 
 1) Formatting the input arguments to ensure that all inputted integers are displayed as 00.00 as opposed to 0, 00, 00.0 etc
 
-2) Formatting the view_bank_statement so that if no transactions are made for debit when something has been credited, or vice versa, instead of 0, it simply has no character. For example 22/02/2022 || || 500 || 15000 instead of 22/02/2022 || 0 || 500 || 15000
+2) Raise an error if the input arguments are anything but 1 number, either an integer or a decimal number, and/or the numbers are negative
 
+3) Resolve outstanding Rubocop errors
 
+4) Split the classes into the following:
+  UserInterface
+  Date
+  Bank_Account
+  Formatting
+  *and corresponding Spec files for each Class file
 
 --------------------------------------------------------------
 
