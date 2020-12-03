@@ -1,34 +1,38 @@
 require 'bank'
 
 describe Bank do
-  it 'lets a user see his/her default bank balance' do
-    expect(subject.balance).to eq 0
-  end
 
-  it 'adds deposited money to the users bank balance' do
-    subject.amount_deposited(500)
-    expect(subject.balance).to eq 500
-  end
-
-  it 'subtracts money from the users bank balance' do
-    subject.amount_to_withdraw(500)
-    expect(subject.balance).to eq -500
-  end
-
-  it 'allows a user to see his/her bank balance after depositing money' do
-    subject.amount_deposited(35)
-    expect(subject.balance).to eq 35
-  end
-
-  it 'allows a user to see his/her bank balance after withdrawing money' do
-    subject.amount_to_withdraw(65)
-    expect(subject.balance).to eq -65
-  end
-
-  #the date in this test needs to be stubbed to a date which is anything but the current date at the time of running rspec
   it 'adds a transaction_array to the bank_statement' do
     subject.amount_deposited(750)
-    expect(subject.view_bank_statement).to eq [['Date || Credit || Debit || Balance'], ['02/12/2020', 750, 0, 750]]
+    expect(subject.view_bank_statement).to eq [['Date || Credit || Debit || Balance'],
+    ['03/12/2020', 750, 0, 750]]
+  end
+
+  it 'adds multiple transaction_arrays to the bank_statement' do
+    subject.amount_deposited(750)
+    subject.amount_deposited(1000)
+    expect(subject.view_bank_statement).to eq [['Date || Credit || Debit || Balance'],
+    ['03/12/2020', 750, 0, 750], ['03/12/2020', 1000, 0, 1750]]
+  end
+
+  it 'adds a transaction_array to the bank_statement' do
+    subject.amount_to_withdraw(2000)
+    expect(subject.view_bank_statement).to eq [['Date || Credit || Debit || Balance'],
+    ['03/12/2020', 0, 2000, -2000]]
+  end
+
+  it 'adds multiple transaction_arrays to the bank_statement' do
+    subject.amount_to_withdraw(3000)
+    subject.amount_to_withdraw(1500)
+    expect(subject.view_bank_statement).to eq [['Date || Credit || Debit || Balance'],
+    ['03/12/2020', 0, 3000, -3000], ['03/12/2020', 0, 1500, -4500]]
+  end
+
+  it 'adds multiple transaction_arrays to the bank_statement' do
+    subject.amount_deposited(90_000)
+    subject.amount_to_withdraw(10_000)
+    expect(subject.view_bank_statement).to eq [['Date || Credit || Debit || Balance'],
+    ['03/12/2020', 90_000, 0, 90_000], ['03/12/2020', 90_000, 10_000, 80_000]]
   end
 
 end

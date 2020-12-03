@@ -1,7 +1,5 @@
 class Date
 
-  attr_reader :date_formatter
-
   def initialize
     @date = Time.new
   end
