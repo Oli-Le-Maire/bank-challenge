@@ -35,4 +35,10 @@ describe Bank do
     ['03/12/2020 || 90000 || 0 || 90000'], ['03/12/2020 || 90000 || 10000 || 80000']]
   end
 
+  it 'formats the bank statement array to required format' do
+    subject.amount_deposited(100)
+    expect(subject.view_bank_statement).to eq [['Date || Credit || Debit || Balance'],
+    ['03/12/2020 || 100 || 0 || 100']]
+  end
+
 end
