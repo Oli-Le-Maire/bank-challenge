@@ -79,12 +79,12 @@ Instructions:
   The code was intended to be structured in the following classes, each within a file of it's own:
 
   UserInterface
-  Date
+  TransactionDate
   Bank_Account
   Formatting
   *and corresponding Spec files for each Class file
 
-  However, due to the project taking longer than expected, the main class called Bank which was to be split, remained along with the only other class of Date.
+  However, due to the project taking longer than expected, the main class called Bank which was to be split, remained along with the only other class of TransactionDate.
 
 ------------------------------------------------------------
 
@@ -98,7 +98,7 @@ Tasks not completed
 
 4) Split the classes into the following:
   UserInterface
-  Date
+  TransactionDate
   Bank_Account
   Formatting
   *and corresponding Spec files for each Class file
