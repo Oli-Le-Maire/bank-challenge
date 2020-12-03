@@ -81,36 +81,6 @@ describe Bank do
   it 'formats the bank statement array to required format' do
     date = TransactionDate.new
     today = date.date_formatter
-    subject.amount_deposited(100)
-    expect { subject.view_bank_statement }.to output("Date || Credit || Debit || Balance\n#{today} || 100 ||  || 100\n").to_stdout
-  end
-
-  it 'formats the bank statement array to required format' do
-    date = TransactionDate.new
-    today = date.date_formatter
-    subject.amount_deposited(100)
-    subject.amount_deposited(7500)
-    expect { subject.view_bank_statement }.to output("Date || Credit || Debit || Balance\n#{today} || 7500 ||  || 7600\n#{today} || 100 ||  || 100\n").to_stdout
-  end
-
-  it 'formats the bank statement array to required format' do
-    date = TransactionDate.new
-    today = date.date_formatter
-    subject.amount_to_withdraw(200)
-    expect { subject.view_bank_statement }.to output("Date || Credit || Debit || Balance\n#{today} ||  || 200 || -200\n").to_stdout
-  end
-
-  it 'formats the bank statement array to required format' do
-    date = TransactionDate.new
-    today = date.date_formatter
-    subject.amount_to_withdraw(150)
-    subject.amount_to_withdraw(7700)
-    expect { subject.view_bank_statement }.to output("Date || Credit || Debit || Balance\n#{today} ||  || 7700 || -7850\n#{today} ||  || 150 || -150\n").to_stdout
-  end
-
-  it 'formats the bank statement array to required format' do
-    date = TransactionDate.new
-    today = date.date_formatter
     subject.amount_deposited(99)
     subject.amount_to_withdraw(99)
     expect { subject.view_bank_statement }.to output("Date || Credit || Debit || Balance\n#{today} ||  || 99 || 0\n#{today} || 99 ||  || 99\n").to_stdout
