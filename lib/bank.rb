@@ -13,15 +13,26 @@ class Bank
     @bank_statement_formatting = [['Date || Credit || Debit || Balance']]
   end
 
-  def amount_deposited(deposited = 0)
+  def amount_deposited(deposited = 0, withdrawn = 0)
     @deposited = deposited
+    @withdrawn = withdrawn
     @balance += @deposited
-    format_transaction_array
+    change_0s_to_empty_strings
   end
 
-  def amount_to_withdraw(withdrawn = 0)
+  def amount_to_withdraw(withdrawn = 0, deposited = 0)
     @withdrawn = withdrawn
+    @deposited = deposited
     @balance -= @withdrawn
+    change_0s_to_empty_strings
+  end
+
+  def change_0s_to_empty_strings
+    if @withdrawn == 0
+      @withdrawn = ""
+    else
+      @deposited = ""
+    end
     format_transaction_array
   end
 
