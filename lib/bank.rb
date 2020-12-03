@@ -48,7 +48,7 @@ class Bank
   end
 
   def view_bank_statement
-    @bank_statement
+    puts @bank_statement
   end
 
 end

@@ -36,7 +36,12 @@ As a user,
 so that I can keep my money safe,
 I want to be able to deposit money into my bank account.
 
-
+Instructions:
+a) for use in IRB
+  1) go into IRB from the project root file
+  2) require the file by typing into the command line, require './lib/bank.rb'
+  3) instantiate a new object of bank by typing in bank = Bank.new
+  4) enter the amount of money you wish to deposit by typing in bank.
 
 Story 2.
 As a user,
