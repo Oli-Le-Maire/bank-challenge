@@ -1,11 +1,11 @@
-require_relative 'date'
+require_relative 'transaction_date'
 
 class Bank
 
   attr_reader :balance, :transaction_array, :date_formatter
 
   def initialize
-    @date = Date.new
+    @date = TransactionDate.new
     @balance = 0
     @transaction_array = []
     @deposited = 0

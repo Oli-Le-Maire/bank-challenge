@@ -1,4 +1,4 @@
-class Date
+class TransactionDate
 
   def initialize
     @date = Time.new

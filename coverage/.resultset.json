@@ -9,10 +9,6 @@
           null,
           1,
           1,
-          2,
-          null,
-          null,
-          1,
           1,
           1,
           2,
@@ -20,9 +16,6 @@
           null,
           1,
           1,
-          2,
-          null,
-          null,
           1,
           1,
           1,
@@ -32,9 +25,28 @@
           1,
           1,
           1,
+          1,
           2,
           null,
           null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          null,
+          null,
+          1,
+          1,
           1,
           1,
           2,
@@ -100,8 +112,23 @@
           null,
           null
         ]
+      },
+      "/Users/username/Desktop/Makers/bank-challenge/lib/transaction_date.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          12,
+          null,
+          null,
+          1,
+          15,
+          null,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1606992636
+    "timestamp": 1607009319
   }
 }

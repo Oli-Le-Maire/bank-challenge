@@ -90,13 +90,9 @@ Instructions:
 
 Tasks not completed
 
-1) Mocking the time of any transaction. Due to this, tests will fail if they are being done on any day that isn't 03/12/2020.
+1) Formatting the input arguments to ensure that all inputted integers are displayed as 00.00 as opposed to 0, 00, 00.0 etc
 
-NB: Please find and replace all instances of 03/12/2020 and replace with today's date in the same format to see all tests pass. This is not ideal but with show you the effect of a successful mock, had this been implemented
-
-2) Formatting the input arguments to ensure that all inputted integers are displayed as 00.00 as opposed to 0, 00, 00.0 etc
-
-3) Formatting the view_bank_statement so that if no transactions are made for debit when something has been credited, or vice versa, instead of 0, it simply has no character. For example 22/02/2022 || || 500 || 15000 instead of 22/02/2022 || 0 || 500 || 15000
+2) Formatting the view_bank_statement so that if no transactions are made for debit when something has been credited, or vice versa, instead of 0, it simply has no character. For example 22/02/2022 || || 500 || 15000 instead of 22/02/2022 || 0 || 500 || 15000
 
 
 
