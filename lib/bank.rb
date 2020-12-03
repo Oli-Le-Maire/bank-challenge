@@ -26,10 +26,9 @@ class Bank
   end
 
   def format_transaction_array
-    @transaction_array << @date.date_formatter
-    @transaction_array << @deposited
-    @transaction_array << @withdrawn
-    @transaction_array << @balance
+    @transaction_array << "#{@date.date_formatter}" +
+    " || " + "#{@deposited}" + " || " + "#{@withdrawn}" +
+    " || " + "#{@balance}"
     add_transaction_array_to_bank_statement
   end
 
