@@ -32,7 +32,7 @@ describe Bank do
     subject.amount_deposited(90_000)
     subject.amount_to_withdraw(10_000)
     expect(subject.view_bank_statement).to eq [['Date || Credit || Debit || Balance'],
-    ['03/12/2020 || 90000 || 10000 || 80000'], ['03/12/2020 || 90000 || 0 || 90000']]
+    ['03/12/2020 || 0 || 10000 || 80000'], ['03/12/2020 || 90000 || 0 || 90000']]
   end
 
   it 'formats the bank statement array to required format' do

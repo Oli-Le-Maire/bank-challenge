@@ -29,6 +29,8 @@ class Bank
     @transaction_array << "#{@date.date_formatter}" +
     " || " + "#{@deposited}" + " || " + "#{@withdrawn}" +
     " || " + "#{@balance}"
+    @deposited = 0
+    @withdrawn = 0
     add_transaction_array_to_bank_statement
   end
 
@@ -39,8 +41,9 @@ class Bank
   end
 
   def format_bank_statement
-    @bank_statement = @bank_statement_formatting.reverse
-    @bank_statement.insert(0, @bank_statement.delete_at(-1))
+    @bank_statement_title_to_top = @bank_statement_formatting.reverse
+    @bank_statement_title_to_top.insert(0,  @bank_statement_title_to_top.delete_at(-1))
+    @bank_statement = @bank_statement_title_to_top.each { |x| puts x }
     view_bank_statement
   end
 
