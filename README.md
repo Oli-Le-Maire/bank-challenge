@@ -107,30 +107,40 @@ Tasks not completed
 
 Terminal example of working app
 
+iMac:bank-challenge username$ irb
+
 2.6.5 :001 > require './lib/bank.rb'
  => true
 2.6.5 :002 > bank = Bank.new
- => #<Bank:0x00007febfa17d818 @date=#<Date:0x00007febfa17d7f0 @date=2020-12-03 09:29:16 +0000>, @balance=0, @transaction_array=[], @deposited=0, @withdrawn=0, @bank_statement_formatting=[["Date || Credit || Debit || Balance"]]>
+ => #<Bank:0x00007f99c095d060 @date=#<TransactionDate:0x00007f99c095d038 @date=2020-12-03 17:50:44 +0000>, @balance=0, @transaction_array=[], @deposited=0, @withdrawn=0, @bank_statement_formatting=[["Date || Credit || Debit || Balance"]]>
 2.6.5 :003 > bank.amount_to_withdraw(90)
 Date || Credit || Debit || Balance
-03/12/2020 || 0 || 90 || -90
+03/12/2020 ||  || 90 || -90
 Date || Credit || Debit || Balance
-03/12/2020 || 0 || 90 || -90
+03/12/2020 ||  || 90 || -90
  => nil
 2.6.5 :004 > bank.amount_to_withdraw(5000)
 Date || Credit || Debit || Balance
-03/12/2020 || 0 || 5000 || -5090
-03/12/2020 || 0 || 90 || -90
+03/12/2020 ||  || 5000 || -5090
+03/12/2020 ||  || 90 || -90
 Date || Credit || Debit || Balance
-03/12/2020 || 0 || 5000 || -5090
-03/12/2020 || 0 || 90 || -90
+03/12/2020 ||  || 5000 || -5090
+03/12/2020 ||  || 90 || -90
  => nil
 2.6.5 :005 > bank.amount_deposited(20000)
 Date || Credit || Debit || Balance
-03/12/2020 || 20000 || 0 || 14910
-03/12/2020 || 0 || 5000 || -5090
-03/12/2020 || 0 || 90 || -90
+03/12/2020 || 20000 ||  || 14910
+03/12/2020 ||  || 5000 || -5090
+03/12/2020 ||  || 90 || -90
 Date || Credit || Debit || Balance
-03/12/2020 || 20000 || 0 || 14910
-03/12/2020 || 0 || 5000 || -5090
-03/12/2020 || 0 || 90 || -90
+03/12/2020 || 20000 ||  || 14910
+03/12/2020 ||  || 5000 || -5090
+03/12/2020 ||  || 90 || -90
+ => nil
+2.6.5 :006 > bank.view_bank_statement
+Date || Credit || Debit || Balance
+03/12/2020 || 20000 ||  || 14910
+03/12/2020 ||  || 5000 || -5090
+03/12/2020 ||  || 90 || -90
+ => nil
+2.6.5 :007 >
