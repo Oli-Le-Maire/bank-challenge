@@ -29,8 +29,8 @@ describe Bank do
   end
 
   it 'adds multiple transaction_arrays to the bank_statement' do
-    subject.amount_deposited(90000)
-    subject.amount_to_withdraw(10000)
+    subject.amount_deposited(90_000)
+    subject.amount_to_withdraw(10_000)
     expect(subject.view_bank_statement).to eq [['Date || Credit || Debit || Balance'],
     ['03/12/2020 || 90000 || 0 || 90000'], ['03/12/2020 || 90000 || 10000 || 80000']]
   end

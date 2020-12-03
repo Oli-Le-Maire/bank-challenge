@@ -35,11 +35,16 @@ class Bank
   def add_transaction_array_to_bank_statement
     @bank_statement << @transaction_array
     @transaction_array = []
+    format_bank_statement
+  end
+
+  def format_bank_statement
+    @bank_statement_to_view = @bank_statement.each { |x| puts x }
     view_bank_statement
   end
 
   def view_bank_statement
-    @bank_statement
+    @bank_statement_to_view
   end
 
 end

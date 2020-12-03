@@ -14,7 +14,7 @@
       <img src="./assets/0.11.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2020-12-03T01:26:48+00:00">2020-12-03T01:26:48+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2020-12-03T01:47:18+00:00">2020-12-03T01:47:18+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -30,7 +30,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         3.1
+         3.68
        </span>
     </span> hits/line
     )
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>50</b> relevant lines,
-    <span class="green"><b>50</b> lines covered</span> and
+    <b>53</b> relevant lines,
+    <span class="green"><b>53</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -73,10 +73,10 @@
           <td class="strong t-file__name"><a href="#cdfe3309143b7bb136eba3d1396df5cd42740802" class="src_link" title="lib/bank.rb">lib/bank.rb</a></td>
           <td class="green strong t-file__coverage">100.0 %</td>
           <td>50</td>
-          <td>27</td>
-          <td>27</td>
+          <td>30</td>
+          <td>30</td>
           <td>0</td>
-          <td>4.89</td>
+          <td>5.73</td>
           
         </tr>
       
@@ -121,8 +121,8 @@
     
 
     <div class="t-line-summary">
-      <b>27</b> relevant lines.
-      <span class="green"><b>27</b> lines covered</span> and
+      <b>30</b> relevant lines.
+      <span class="green"><b>30</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -547,7 +547,7 @@
 
             
 
-            <code class="ruby">    view_bank_statement</code>
+            <code class="ruby">    format_bank_statement</code>
           </li>
         </div>
       
@@ -580,29 +580,29 @@
 
             
 
-            <code class="ruby">  def view_bank_statement</code>
+            <code class="ruby">  def format_bank_statement</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="15" data-linenumber="42">
-            <span class="hits">15</span>
+          <li class="covered" data-hits="30" data-linenumber="42">
+            <span class="hits">30</span>
             
 
             
 
-            <code class="ruby">    @bank_statement</code>
+            <code class="ruby">    @bank_statement_to_view = @bank_statement.each { |x| puts x }</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="43">
-            
-            
-
+          <li class="covered" data-hits="9" data-linenumber="43">
+            <span class="hits">9</span>
             
 
-            <code class="ruby">    # format_bank_statement</code>
+            
+
+            <code class="ruby">    view_bank_statement</code>
           </li>
         </div>
       
@@ -629,24 +629,24 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="46">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="46">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  # def format_bank_statement</code>
+            
+
+            <code class="ruby">  def view_bank_statement</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="47">
-            
-            
-
+          <li class="covered" data-hits="15" data-linenumber="47">
+            <span class="hits">15</span>
             
 
-            <code class="ruby">  #   @bank_statement.each { |x| print x }</code>
+            
+
+            <code class="ruby">    @bank_statement_to_view</code>
           </li>
         </div>
       
@@ -657,7 +657,7 @@
 
             
 
-            <code class="ruby">  # end</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -1062,7 +1062,7 @@
 
             
 
-            <code class="ruby">    subject.amount_deposited(90000)</code>
+            <code class="ruby">    subject.amount_deposited(90_000)</code>
           </li>
         </div>
       
@@ -1073,7 +1073,7 @@
 
             
 
-            <code class="ruby">    subject.amount_to_withdraw(10000)</code>
+            <code class="ruby">    subject.amount_to_withdraw(10_000)</code>
           </li>
         </div>
       
